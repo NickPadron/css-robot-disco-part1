@@ -54,6 +54,24 @@ body {
   animation: colorChange 0.7s infinite alternate ease-in-out;
 }
 
+@keyframes colorChange {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: #b903a1;
+  }
+  50% {
+    background-color: blue;
+  }
+  75% {
+    background-color: #198a7b;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
 .robot-eye-right {
   clip-path: polygon(
     100% 50%,
@@ -93,15 +111,34 @@ body {
   animation: rotate360 15s linear infinite;
 }
 
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .ears {
   display: flex;
   flex-direction: row;
   position: relative;
-  right: 1042px;
+  right: 140px;
   max-height: 500px;
   min-width: 1150px;
   justify-content: space-between;
   animation: bounce 0.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
 }
 
 .robot-ear-left {
@@ -161,6 +198,16 @@ body {
   animation: fadeInOut 3s infinite ease-in-out;
 }
 
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 .nose-circle {
   width: 150px;
   height: 150px;
@@ -170,6 +217,16 @@ body {
   clip-path: circle(50%);
   z-index: 200;
   animation: scaleUpDown 1s infinite ease-in-out;
+}
+
+@keyframes scaleUpDown {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 .robot-teeth {
